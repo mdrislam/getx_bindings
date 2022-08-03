@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:project_planning_with_getx/controller/user_controller.dart';
+import 'package:skeletons/skeletons.dart';
 
 class UserView extends GetView<UserController> {
   const UserView({Key? key}) : super(key: key);
@@ -19,9 +20,7 @@ class UserView extends GetView<UserController> {
           onError: (error) => Center(
                 child: Text(error.toString()),
               ),
-          onLoading: const Center(
-            child: CircularProgressIndicator(),
-          )),
+          onLoading:SkeletonListView() ),
     );
   }
 }
